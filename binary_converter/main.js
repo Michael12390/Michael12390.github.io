@@ -1,6 +1,7 @@
 // window.onload = window.setTimeout(showImage(), 5000)
 
 window.addEventListener('load', function() {
+    console.log('retard')
     window.setTimeout(showImage(), 5000)
 })
 
