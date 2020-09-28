@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .canvas {
+        width: 60%;
+        border: 3px solid rgb(0, 110, 236);
+        margin: auto;
+        padding: 10px;
+        text-align: center;
+    }
+    .input-text {
+        margin: auto;
+    }
+    .result-text {
+        margin: auto;
+    }
+    Textarea {
+        border: 1px solid rgb(0, 110, 236);
+        border-style: solid;
+    }
+    TextArea:focus {
+    outline: none !important;
+    border: 2px solid rgb(0, 110, 236);
+    box-shadow: 0 0 10px #719ECE;
+    }
+</style>
+<body>
+    <div class="canvas">
+        <div class="input-text">
+            <div>
+                <div class="input-type">
+                    <label for="input-type">Input Type:</label>
+                    <select name="input-type" id="input-type" onchange="convert()">
+                    <option value="text">Text</option>
+                    <option value="binary">Binary</option>
+                    <option value="hexadecimal">Hexadecimal</option>
+                    <option value="octal">Octal</option>
+                    <option value="integer">Integer</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div>
+                <div class="input-field" style="margin-top: 20px;">
+                    <Textarea id="textareainput" rows="20" cols="40" oninput="convert()"></Textarea>
+                </div>
+            </div>
+            </div>
+    
+            <div class="output-text" style="margin-top: 20px;">
+                <div>
+                    <div class="output-type">
+                        <label for="output-type">Output Type:</label>
+                        <select name="result-type" id="output-type" onchange="convert()">
+                        <option value="text">Text</option>
+                        <option value="binary" selected="selected">Binary</option>
+                        <option value="hexadecimal">Hexadecimal</option>
+                        <option value="octal">Octal</option>
+                        <option value="integer">Integer</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="output-field" style="margin-top: 20px;">
+                        <Textarea id="textareaoutput" readonly rows="20" cols="40"></Textarea>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+
+<script src="main.js"></script>
+</html>
