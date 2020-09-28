@@ -1,4 +1,8 @@
-window.onload = window.setTimeout(showImage(), 5000)
+// window.onload = window.setTimeout(showImage(), 5000)
+
+window.addEventListener('load', function() {
+    window.setTimeout(showImage(), 5000)
+})
 
 function showImage() {
     console.log('loaded')
