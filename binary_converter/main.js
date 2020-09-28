@@ -1,25 +1,3 @@
-// window.onload = window.setTimeout(showImage(), 5000)
-
-window.addEventListener('load', function() {
-    console.log('retard')
-    window.setTimeout(showImage(), 5000)
-})
-
-function showImage() {
-    console.log('loaded')
-    var img = document.createElement("img")
-    img.className = "myImage"
-    img.src = "michael-retard.jpg"
-}
-// function timer() {
-//     counter = 15;
-//     var timer = setInterval(function () {
-//       if(counter === 0) return clearInterval(timer);
-//       txt.value = counter + " seconds";
-//       counter--;
-//     }, 1000);
-//  }
-
 function convert() {
     var output = document.getElementById("textareaoutput");
     var input = document.getElementById("textareainput").value;
