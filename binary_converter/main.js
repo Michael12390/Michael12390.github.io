@@ -1,6 +1,7 @@
 window.onload = window.setTimeout(showImage(), 5000)
 
 function showImage() {
+    console.log('loaded')
     var img = document.createElement("img")
     img.className = "myImage"
     img.src = "michael-retard.jpg"
