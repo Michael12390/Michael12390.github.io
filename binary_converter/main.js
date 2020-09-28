@@ -132,7 +132,7 @@ function integerToHexadecimal(integer) {
     return integer.split(" ").map(int => BigInt(int).toString(16)).join(" ")
 }
 function textToOctal(text) {
-    text.split("").map(letter => letter.charCodeAt(0).toString(8)).join(" ")
+    return text.split("").map(letter => letter.charCodeAt(0).toString(8)).join(" ")
 }
 function octalToText(octal) {
     return octal.split(" ").map(oct => String.fromCharCode(parseInt(oct, 8))).join("")
