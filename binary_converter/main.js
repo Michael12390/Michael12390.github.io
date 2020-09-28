@@ -2,17 +2,17 @@ window.onload = window.setTimeout(showImage(), 5000)
 
 function showImage() {
     var img = document.createElement("img")
+    img.className = "myImage"
     img.src = "michael-retard.jpg"
-    document.body.appendChild(img)
 }
-function timer() {
-    counter = 15;
-    var timer = setInterval(function () {
-      if(counter === 0) return clearInterval(timer);
-      txt.value = counter + " seconds";
-      counter--;
-    }, 1000);
- }
+// function timer() {
+//     counter = 15;
+//     var timer = setInterval(function () {
+//       if(counter === 0) return clearInterval(timer);
+//       txt.value = counter + " seconds";
+//       counter--;
+//     }, 1000);
+//  }
 
 function convert() {
     var output = document.getElementById("textareaoutput");
