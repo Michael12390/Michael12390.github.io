@@ -1,0 +1,155 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+<style>
+    .canvas {
+        border: 3px solid rgb(0, 110, 236);
+        margin: auto;
+        text-align: center;
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+    .input-text {
+        /* margin: auto;*/
+        float: left;
+        left: 0;
+        margin-left: 20px;
+        /* position: fixed;
+        left: 0px;
+        margin-left: 20px;
+        text-align: center;
+        width: 500px;
+        height: 40%;
+        right: 5%;
+        bottom: 5%;
+        border: 5px solid green; */
+
+    }
+    .output-text {
+        /* margin: auto; */
+        float: right;
+        right: 0;
+        margin-right: 20px;
+        /* position: fixed;
+        right: 0px;
+        margin-right: 20px;
+        text-align: center;
+        width: 500px;
+        height: 100px;
+        right: 5%;
+        bottom: 5%;
+        border: 5px solid green; */
+    }
+    Textarea {
+        border: 1px solid rgb(0, 110, 236);
+        border-style: solid;
+        font-family: 'Lato', sans-serif;
+        resize: none;
+        /* width: 100%;
+        height: 95%; */
+    }
+    TextArea:focus {
+    outline: none !important;
+    /* border: 2px solid rgb(0, 110, 236);
+    box-shadow: 0 0 10px #719ECE; */
+    }
+    select {
+        font-family: 'Lato', sans-serif;
+        background-color: rgb(0, 110, 236);
+        color: white;
+        appearance: none;
+        width: 130px;
+        height: 30px;
+        text-align-last: center;
+        border-radius: 5px;
+    }
+    /* @font-face {
+        font-family: ;
+        src: url(styles/fonts/Lato/Lato-Bold.ttf);
+    } */
+    @font-face {
+        font-family: "lato-bold";
+        src: url(styles/fonts/Lato/Lato-Bold.ttf);
+        font-style: bold;
+        font-weight: 100;
+    }
+    h1 {
+        font-family: 'Lato', sans-serif;
+        color: rgb(0, 110, 236);
+    }
+    .copyButton {
+        width: 80px;
+        height: 40px;
+        margin-top: 20px;
+        background-color: rgb(0, 110, 236);
+        color: white;
+        border: none;
+        border-radius: 10px;
+    }
+    .copyButton:focus {
+        outline: none !important;
+        /* color: grey; */
+    }
+    .copyButton:active {
+        outline: none !important;
+        color: grey;
+    }
+}
+</style>
+<body>
+    <div class="canvas">
+        <h1 style="margin-top: 30px; height: 60px; text-align:center;">Binary Converter</h1>
+        <div class="input-text">
+            <div>
+                <div class="input-type" style="margin-top: 100;">
+                    <!-- <label for="input-type">Input Type:</label> -->
+                    <select name="input-type" id="input-type" onchange="convert()">
+                    <option value="text">Text</option>
+                    <option value="binary">Binary</option>
+                    <option value="hexadecimal">Hexadecimal</option>
+                    <option value="octal">Octal</option>
+                    <option value="integer">Integer</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div>
+                <div class="input-field" style="margin-top: 30px;">
+                    <Textarea id="textareainput" rows="20" placeholder="Enter text..." oninput="convert()"></Textarea>
+                </div>
+            </div>
+            </div>
+    
+            <div class="output-text" style="margin-top: 0px;">
+                <div>
+                    <div class="output-type" style="margin-top: 100;">
+                        <!-- <label for="output-type">Output Type:</label> -->
+                        <select name="result-type" id="output-type" onchange="convert()">
+                        <option value="text">Text</option>
+                        <option value="binary" selected="selected">Binary</option>
+                        <option value="hexadecimal">Hexadecimal</option>
+                        <option value="octal">Octal</option>
+                        <option value="integer">Integer</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="output-field" style="margin-top: 30px;">
+                        <Textarea id="textareaoutput" readonly rows="20"></Textarea>
+                    </div>
+                </div>
+                <div>
+                    <button class="copyButton" onclick="copyText()">Copy</button>
+                </div>
+            </div>
+    </div>
+</body>
+
+<script src="main.js"></script>
+</html>

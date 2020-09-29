@@ -1,9 +1,29 @@
+function copyText() {
+    /* Get the text field */
+    var copyText = document.getElementById("textareaoutput");
+  
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+  
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
+    copyText.setSelectionRange(0,0)
+  }
+
+
 function convert() {
     var output = document.getElementById("textareaoutput");
+    var textAreaInput = document.getElementById('textareainput')
     var input = document.getElementById("textareainput").value;
 
     var inputType = document.getElementById("input-type").value
     var outputType = document.getElementById("output-type").value
+
+    textAreaInput.placeholder = "Enter " + inputType.charAt(0).toUpperCase() + inputType.slice(1) + "..."
     output.value = ""
     if (inputType == "text") {
         if (outputType == "text") {
